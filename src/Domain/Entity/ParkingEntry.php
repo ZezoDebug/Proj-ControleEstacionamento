@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace src\Domain\Entity;
 
 use src\Domain\ValueObject\VehicleType;
-use DateTimeImmutable;
 use src\Domain\ValueObject\Plate;
+use DateTimeImmutable;
 
 class ParkingEntry
 {

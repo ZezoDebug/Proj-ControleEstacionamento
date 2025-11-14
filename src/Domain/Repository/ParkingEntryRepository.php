@@ -6,7 +6,7 @@ namespace src\Domain\Repository;
 
 use src\Domain\Entity\ParkingEntry;
 
-interface ParkingEntryRepositoryInterface
+interface ParkingEntryRepository
 {
     public function save(ParkingEntry $entry): void;
 }

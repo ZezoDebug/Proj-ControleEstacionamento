@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Domain\Service;
+namespace src\Domain\Service;
 
 use DateTimeImmutable;
 

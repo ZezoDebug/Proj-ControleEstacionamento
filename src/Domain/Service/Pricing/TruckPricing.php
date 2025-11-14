@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Src\Domain\Service\Pricing;
+namespace src\Domain\Service\Pricing;
 
-use Src\Domain\Service\IVehiclePricingStrategy;
+use src\Domain\Service\IVehiclePricingStrategy;
 
 class TruckPricing implements IVehiclePricingStrategy
 {
