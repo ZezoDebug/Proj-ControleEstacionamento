@@ -1,0 +1,20 @@
+{
+    "name": "josvitor/proj-controle-estacionamento",
+    "description": "\"Projeto: Controle de Estacionamento Inteligente em PHP e SQLite\"",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Josvitor\\ProjControleEstacionamento\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ZezoDebug",
+            "email": "josefaculdade.24@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^4.0"
+    }
+}
