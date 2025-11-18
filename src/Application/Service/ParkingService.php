@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace src\Application\Service;
 
 use src\Domain\Entity\ParkingEntry;
-use src\Domain\Repository\ParkingEntryRepository;
+use src\Domain\Repository\SqliteParkingEntryRepository;
 use src\Domain\Service\IVehiclePricingStrategy;
 use DateTimeImmutable;
 
 class ParkingService
 {
     public function __construct(
-        private ParkingEntryRepository $repository,
+        private SqliteParkingEntryRepository $repository,
         private IVehiclePricingStrategy $princingStrategy
     ) {
     }
