@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace src\Application\Service;
 
 use src\Domain\Entity\ParkingEntry;
-use src\Domain\Repository\SqliteParkingEntryRepository;
+use src\Infra\Persistence\SqliteParkingEntryRepository;
 use src\Domain\Service\IVehiclePricingStrategy;
 use DateTimeImmutable;
 
@@ -39,5 +39,18 @@ class ParkingService
         $hours = (int) ceil($second / 3600);
 
         return $hours * $this->princingStrategy->pricePerHour();
+    }
+
+    public function exitVehicle(string $plate, ?DateTimeImmutable $exitTime = null): float
+    {
+        $entry = $this->repository->findByPlate($plate);
+        if (!$entry) {
+            throw new \Exception("Vehicle with plate $plate not found.");
+        }
+
+        $price = $this->calculatePrice($entry, $exitTime);
+        $this->repository->deleteByPlate($plate);
+
+        return $price;
     }
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estacionamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold"><i class="fas fa-car mr-2"></i>Controle de Estacionamento</h1>
+            <div class="space-x-4">
+                <button id="dashboardBtn" class="bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded transition duration-300">Dashboard</button>
+                <button id="reportsBtn" class="bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded transition duration-300">Relatórios</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-6">
+        <div id="dashboard" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 animate-fade-in">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800"><i class="fas fa-plus-circle mr-2 text-green-500"></i>Entrada de Veículo</h2>
+                    <form id="entryForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Placa</label>
+                            <input type="text" id="plate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="ABC-1234" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de Veículo</label>
+                            <select id="vehicleType" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Selecione...</option>
+                                <option value="carro">Carro</option>
+                                <option value="moto">Moto</option>
+                                <option value="caminhao">Caminhão</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-parking mr-2"></i>Registrar Entrada
+                        </button>
+                    </form>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 animate-fade-in">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800"><i class="fas fa-sign-out-alt mr-2 text-red-500"></i>Saída de Veículo</h2>
+                    <form id="exitForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Placa</label>
+                            <input type="text" id="exitPlate" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="ABC-1234" required>
+                        </div>
+                        <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-calculator mr-2"></i>Calcular e Registrar Saída
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 animate-fade-in">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800"><i class="fas fa-list mr-2 text-blue-500"></i>Veículos Estacionados</h2>
+                <div id="parkedVehicles" class="space-y-2">
+                </div>
+            </div>
+        </div>
+
+        <div id="reports" class="hidden space-y-6">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800"><i class="fas fa-chart-bar mr-2 text-purple-500"></i>Relatórios de Faturamento</h2>
+                <div id="chartContainer" class="w-full">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

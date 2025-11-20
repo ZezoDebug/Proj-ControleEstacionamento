@@ -14,7 +14,6 @@ final class InMemoryRepo implements ParkingEntryRepository
         $this->entries[] = $entry;
     }
 
-    /** @return ParkingEntry[] */
     public function findAll(): array
     {
         return $this->entries;

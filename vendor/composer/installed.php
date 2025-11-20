@@ -3,7 +3,7 @@
         'name' => 'josvitor/proj-controle-estacionamento',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd74b5fa1cb729f941372f4b31818030aabcd7aa5',
+        'reference' => 'f7b27f5a5536a25f3ac50526ad396c2fdf214f65',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'josvitor/proj-controle-estacionamento' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd74b5fa1cb729f941372f4b31818030aabcd7aa5',
+            'reference' => 'f7b27f5a5536a25f3ac50526ad396c2fdf214f65',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
