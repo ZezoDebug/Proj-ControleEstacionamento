@@ -84,7 +84,8 @@ A aplicação depende **da interface**, não da implementação do repositório.
 - **Public** → ponto de entrada da aplicação  
 
 ---
-
+## Link do Vídeo - [Projeto SOLID | Gestor Inteligente de Estacionamentoe](https://youtu.be/We-0yWT3x-c)
+---
 ## Informações Adicionais
 
 - **Nome:** Felipe Souza Garcia | **RA:** 1990279 :man_technologist:
